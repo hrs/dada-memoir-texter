@@ -5,9 +5,10 @@ class DadaMemoirTexterServer < Sinatra::Base
   end
 
   get "/random-memoir-title" do
-    raise params.inspect
+    name = params[:Body]
+
     twiml = Twilio::TwiML::Response.new do |r|
-      r.Message(RandomMemoirGenerator.new("Harry Schwartz").random_memoir_title)
+      r.Message(RandomMemoirGenerator.new(name).random_memoir_title)
     end
 
     twiml.text
