@@ -6,7 +6,7 @@ class RandomMemoirGenerator
   end
 
   def random_memoir_title
-    tweet_generator = RandomTweetGenerator.new("libraryofemoji")
+    tweet_generator = RandomTweetRetriever.new("libraryofemoji")
     tweet = tweet_generator.random_tweet
     "#{titlecase(tweet)}: The #{name} Story"
   end

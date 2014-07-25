@@ -1,4 +1,4 @@
-class RandomTweetGenerator
+class RandomTweetRetriever
   attr_reader :client, :user
 
   def initialize(user)
